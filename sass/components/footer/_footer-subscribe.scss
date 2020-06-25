@@ -10,7 +10,7 @@
 .subscribe > .forma {
   display: flex;
   flex-direction: column;
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     margin-left: 102px;
   }
 }
@@ -25,12 +25,12 @@
 .forma-field {
   margin-top: 20px;
   @extend %list-rule;
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     display: flex;
   }
 }
 .input-forma {
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     //   margin-right: 12px;
     display: flex;
   }
@@ -60,7 +60,7 @@
     margin-bottom: 20px;
   }
 
-  @media screen and (min-width: $desctop) {
+  @media screen and (min-width: $desktop) {
     width: 358px;
     padding: 18px 12px;
   }
@@ -86,7 +86,7 @@
     color: $white-color;
     margin-left: auto;
     margin-right: auto;
-    @media screen and (min-width: $desctop) {
+    @media screen and (min-width: $desktop) {
       margin-left: 12px;
     }
   }

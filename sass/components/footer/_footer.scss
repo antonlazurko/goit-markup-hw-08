@@ -5,7 +5,7 @@
   text-align: center;
 
   &-flex {
-    @media screen and (min-width: $desctop) {
+    @media screen and (min-width: $desktop) {
       display: flex;
       align-items: baseline;
       justify-content: space-between;
