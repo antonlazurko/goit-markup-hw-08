@@ -1,0 +1,15 @@
+.filtres {
+  @extend %list-rule;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  width: 641px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.visually-hidden {
+  @extend %visually-hidden;
+}
