@@ -1,0 +1,23 @@
+.footer-title {
+  display: none;
+}
+.contacts {
+  margin-bottom: 60px;
+  a {
+    display: block;
+    font-style: normal;
+  }
+  .address {
+    display: block;
+    margin-bottom: 10px;
+    color: $white-color;
+  }
+  .mail {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .link {
+    display: block;
+    color: $secondary-white-color;
+  }
+}

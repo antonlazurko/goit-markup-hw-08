@@ -1,0 +1,98 @@
+.subscribe {
+  color: $white-color;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.subscribe > .forma {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: $desctop) {
+    margin-left: 102px;
+  }
+}
+.subscribe.forma > b {
+  color: $white-color;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.forma-field {
+  margin-top: 20px;
+  @extend %list-rule;
+  @media screen and (min-width: $desctop) {
+    display: flex;
+  }
+}
+.input-forma {
+  @media screen and (min-width: $desctop) {
+    //   margin-right: 12px;
+    display: flex;
+  }
+}
+.input-forma--inner {
+  height: 50px;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  color: $secondary-white-color;
+  font-size: 16px;
+  outline: none;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0);
+  @media screen and (min-width: $mobile) {
+    width: 450px;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 450px;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: $desctop) {
+    width: 358px;
+    padding: 18px 12px;
+  }
+}
+.input-button {
+  display: flex;
+  &--submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    box-sizing: border-box;
+    border: 1px solid $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-weight: 900;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
+    background-color: $accent-color;
+    color: $white-color;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (min-width: $desctop) {
+      margin-left: 12px;
+    }
+  }
+}
+.plane {
+  fill: $white-color;
+  background-color: $accent-color;
+  margin-left: 10px;
+}
