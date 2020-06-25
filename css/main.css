@@ -255,7 +255,7 @@ summary {
   display: list-item;
 }
 
-.footer-social, .forma-field {
+.regular-clients-list, .footer-social, .forma-field {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -316,9 +316,21 @@ a {
   }
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   .container {
-    width: 1140px;
+    width: 1200px;
+  }
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
@@ -361,6 +373,92 @@ a {
   line-height: 1.18;
 }
 
+.regular-clients-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .regular-clients-list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.title.client-title {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .title.client-title {
+    margin-bottom: 50px;
+  }
+}
+
+.regular-clients-list .item {
+  display: block;
+  margin-bottom: 30px;
+  margin-right: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .regular-clients-list .item {
+    margin-bottom: 0;
+  }
+}
+
+.regular-clients-list .title {
+  color: #212121;
+}
+
+.client-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.client-logo:hover,
+.client-logo:focus {
+  border: 1px solid #2196f3;
+}
+
+.client-logo-icon {
+  display: inline-block;
+  fill: #afb1b8;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.client-logo:hover > .client-logo-icon,
+.client-logo:focus > .client-logo-icon {
+  fill: #2196f3;
+}
+
 .footer {
   background-color: #2f303a;
   padding-top: 60px;
@@ -368,7 +466,7 @@ a {
   text-align: center;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) {
   .footer-flex {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -484,7 +582,7 @@ a {
           flex-direction: column;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) {
   .subscribe > .forma {
     margin-left: 102px;
   }
@@ -503,7 +601,7 @@ a {
   margin-top: 20px;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) {
   .forma-field {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -511,7 +609,7 @@ a {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) {
   .input-forma {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -552,7 +650,7 @@ a {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) {
   .input-forma--inner {
     width: 358px;
     padding: 18px 12px;
@@ -594,7 +692,7 @@ a {
   margin-right: auto;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1200px) {
   .input-button--submit {
     margin-left: 12px;
   }
