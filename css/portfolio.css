@@ -280,6 +280,10 @@ body {
   font-family: Roboto, serif;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .title {
   margin: 0px;
   padding: 0px;
