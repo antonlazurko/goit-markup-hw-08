@@ -1,0 +1,49 @@
+.what-we-do {
+  @media screen and (min-width: $mobile) {
+    display: none;
+  }
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+  @media screen and (min-width: $desktop) {
+    background-color: red;
+  }
+}
+.what-we-do-list {
+  @extend %list-rule;
+  display: flex;
+  align-items: center;
+  padding: 0px;
+}
+.section .what-we-do-list .title {
+  padding-top: 27px;
+  padding-bottom: 27px;
+  color: $white-color;
+  /* фон для того чтобы было видно текст */
+  background-color: rgba(47, 48, 58, 0.8);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.what-we-do-list .card {
+  position: relative;
+  & .title-card {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+}
+.what-we-do-list .item {
+  width: 380px;
+}
+.what-we-do-list .item + .item {
+  margin-left: 30px;
+}
+.what-we-do-list .image {
+  display: block;
+}
