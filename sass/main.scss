@@ -2,7 +2,11 @@
 @import './utils/variables';
 @import './utils/placeholders';
 @import '../sass/base/body';
+@import './components/buttons';
 @import './components/page-logo';
+@import './components/hero';
+@import './components/features';
+@import './components/team';
 @import './components/what-we-do';
 @import './components/clients';
 @import './components/footer/footer';
