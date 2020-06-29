@@ -1,7 +1,6 @@
 .regular-clients-list {
-  display: flex;
+  @include centeredFlex($align: stretch, $justify: space-around);
   flex-wrap: wrap;
-  justify-content: space-around;
   @extend %list-rule;
   @media screen and (min-width: $desktop) {
     flex-wrap: nowrap;

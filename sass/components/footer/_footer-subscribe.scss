@@ -64,9 +64,7 @@
 .input-button {
   display: flex;
   &--submit {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include centeredFlex();
     min-width: 200px;
     height: 50px;
     box-sizing: border-box;

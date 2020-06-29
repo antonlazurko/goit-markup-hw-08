@@ -14,18 +14,16 @@
     & .item {
       width: calc((100% - 4 * 15px) / 2);
     }
-    display: flex;
+    @include centeredFlex($align: stretch, $justify: space-around);
     flex-wrap: wrap;
-    justify-content: space-around;
   }
 
   @media screen and (min-width: $desktop) {
     & .item {
       width: calc((100% - 8 * 15px) / 4);
     }
-    display: flex;
+    @include centeredFlex($justify: flex-start);
     flex-wrap: nowrap;
-    align-items: center;
     & .item + .item {
       margin-left: 30px;
     }
@@ -75,8 +73,7 @@
 }
 
 .member-list .link {
-  display: flex;
-  align-items: center;
+  @include centeredFlex();
   margin-right: 10px;
   width: 44px;
   height: 44px;

@@ -6,9 +6,7 @@
 
   &-flex {
     @media screen and (min-width: $desktop) {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
+      @include centeredFlex($align: baseline, $justify: space-between);
       text-align: left;
     }
   }

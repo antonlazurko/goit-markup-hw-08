@@ -1,6 +1,5 @@
 .footer-social {
-  display: flex;
-  justify-content: center;
+  @include centeredFlex();
   padding-top: 20px;
   margin-bottom: 60px;
   @extend %list-rule;
@@ -9,9 +8,7 @@
     margin-right: 10px;
   }
   &__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include centeredFlex();
     width: 44px;
     height: 44px;
     border-radius: 50%;
