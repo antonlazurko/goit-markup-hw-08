@@ -29,7 +29,7 @@
       fill: $accent-color;
     }
   }
-  @media screen and (min-width: $mobile) {
+  @media screen and (max-width: 767px) {
     width: calc((100% - 15px * 2) / 2);
   }
   @media screen and (min-width: $tablet) {

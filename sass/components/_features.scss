@@ -7,10 +7,10 @@
 
   @media screen and (min-width: $mobile) {
     & .item {
+      display: block;
       margin-left: auto;
       margin-right: auto;
     }
-    display: block;
   }
 
   @media screen and (min-width: $tablet) {
