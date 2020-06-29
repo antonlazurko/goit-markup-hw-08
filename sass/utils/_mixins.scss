@@ -1,5 +1,12 @@
-@mixin centeredFlex($type: flex) {
+@mixin centeredFlex($type: flex, $align: center, $justify: center) {
   display: $type;
-  align-items: center;
-  justify-content: center;
+  align-items: $align;
+  justify-content: $justify;
+}
+@mixin transition(
+  $type: border,
+  $time: 250 ms,
+  $style: cubic-bezier(0.4, 0, 0.2, 1)
+) {
+  transition: $type $time $style;
 }

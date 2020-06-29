@@ -1,7 +1,7 @@
 .regular-clients-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   @extend %list-rule;
   @media screen and (min-width: $desktop) {
     flex-wrap: nowrap;
@@ -15,50 +15,43 @@
   }
 }
 .regular-clients-list .item {
-  display: block;
-  margin-bottom: 30px;
-  margin-right: 30px;
-  @media screen and (min-width: $desktop) {
-    margin-bottom: 0;
-    margin-right: 0;
-  }
-}
-// .regular-clients-list .item:nth-child(2n) {
-//   @media screen and (min-width: $mobile) {
-//     margin-right: 0;
-//   }
-// }
-// .regular-clients-list .item:nth-child(3n) {
-//   @media screen and (min-width: $tablet) {
-//     margin-right: 0;
-//   }
-// }
-.regular-clients-list .title {
-  color: $primary-text-color;
-}
-.client-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 170px;
+  @include centeredFlex;
   height: 90px;
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
+  margin-bottom: 30px;
+  @include transition();
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-color;
+    &.item:hover .client-logo-icon,
+    &.item:focus .client-logo-icon {
+      fill: $accent-color;
+    }
+  }
+  @media screen and (min-width: $mobile) {
+    width: calc((100% - 15px * 2) / 2);
+  }
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 15px * 6) / 3);
+  }
+  @media screen and (min-width: $desktop) {
+    width: 170px;
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+}
+.regular-clients-list .title {
+  color: $primary-text-color;
+}
+.client-logo {
+  @include centeredFlex();
   background-repeat: no-repeat;
   background-position: center;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.client-logo:hover,
-.client-logo:focus {
-  border: 1px solid $accent-color;
 }
 .client-logo-icon {
   display: inline-block;
   fill: #afb1b8;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.client-logo:hover > .client-logo-icon,
-.client-logo:focus > .client-logo-icon {
-  fill: $accent-color;
+  @include transition($type: fill);
 }

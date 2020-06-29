@@ -377,8 +377,8 @@ a {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media screen and (max-width: 767px) {
@@ -689,15 +689,15 @@ a {
   background-size: 20px;
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: background-color 250 ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250 ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .member-list .link > .link-icon {
   display: inline-block;
   fill: #afb1b8;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: fill 250 ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250 ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .member-list .link:hover > .link-icon,
@@ -723,6 +723,9 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   padding: 0px;
 }
 
@@ -769,9 +772,8 @@ a {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 @media screen and (min-width: 1200px) {
@@ -795,13 +797,50 @@ a {
 }
 
 .regular-clients-list .item {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
   margin-bottom: 30px;
-  margin-right: 30px;
+  -webkit-transition: border 250 ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250 ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.regular-clients-list .item:hover, .regular-clients-list .item:focus {
+  border: 1px solid #2196f3;
+}
+
+.regular-clients-list .item:hover.item:hover .client-logo-icon,
+.regular-clients-list .item:hover.item:focus .client-logo-icon, .regular-clients-list .item:focus.item:hover .client-logo-icon,
+.regular-clients-list .item:focus.item:focus .client-logo-icon {
+  fill: #2196f3;
+}
+
+@media screen and (min-width: 480px) {
+  .regular-clients-list .item {
+    width: calc((100% - 15px * 2) / 2);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .regular-clients-list .item {
+    width: calc((100% - 15px * 6) / 3);
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .regular-clients-list .item {
+    width: 170px;
     margin-bottom: 0;
     margin-right: 0;
   }
@@ -815,39 +854,21 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 170px;
-  height: 90px;
-  border: 1px solid #afb1b8;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 4px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.client-logo:hover,
-.client-logo:focus {
-  border: 1px solid #2196f3;
 }
 
 .client-logo-icon {
   display: inline-block;
   fill: #afb1b8;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.client-logo:hover > .client-logo-icon,
-.client-logo:focus > .client-logo-icon {
-  fill: #2196f3;
+  -webkit-transition: fill 250 ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250 ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer {
@@ -936,8 +957,8 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   background-color: rgba(255, 255, 255, 0.1);
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: background-color 250 ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250 ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social__link:last-child {
@@ -1127,10 +1148,10 @@ a {
   background-color: #ffffff;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
-  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: -webkit-transform 250 ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250 ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250 ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250 ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250 ms cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
@@ -1251,12 +1272,12 @@ a {
   line-height: 1.4;
   letter-spacing: 0.01em;
   color: #757575;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transition: -webkit-transform 250ms linear;
-  transition: -webkit-transform 250ms linear;
-  transition: transform 250ms linear;
-  transition: transform 250ms linear, -webkit-transform 250ms linear;
+  -webkit-transition: color 250 ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250 ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: -webkit-transform 250 ms linear;
+  transition: -webkit-transform 250 ms linear;
+  transition: transform 250 ms linear;
+  transition: transform 250 ms linear, -webkit-transform 250 ms linear;
 }
 
 .form-input {
@@ -1271,8 +1292,8 @@ a {
             box-sizing: border-box;
     border-radius: 4px;
     padding-left: 42px;
-    -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition: border-color 250 ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250 ms cubic-bezier(0.4, 0, 0.2, 1);
     outline: none;
   }
   .form-input {
@@ -1289,18 +1310,18 @@ a {
 .form-input:not(:placeholder-shown) + .form-label {
   -webkit-transform: translate(-26px, -30px);
           transform: translate(-26px, -30px);
-  -webkit-transition: -webkit-transform 250ms linear;
-  transition: -webkit-transform 250ms linear;
-  transition: transform 250ms linear;
-  transition: transform 250ms linear, -webkit-transform 250ms linear;
+  -webkit-transition: -webkit-transform 250 ms linear;
+  transition: -webkit-transform 250 ms linear;
+  transition: transform 250 ms linear;
+  transition: transform 250 ms linear, -webkit-transform 250 ms linear;
   color: #2196f3;
 }
 
 .form-field:focus-within > .modal-logo,
 .form-input:not(:placeholder-shown) ~ .modal-logo {
   fill: #2196f3;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: fill 250 ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250 ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-logo {
@@ -1308,18 +1329,18 @@ a {
   display: inline-block;
   top: 25%;
   left: 16px;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: fill 250 ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250 ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .comment textarea:focus-within + .form-label,
 .comment textarea:not(:placeholder-shown) + .form-label {
   -webkit-transform: translate(0, -30px);
           transform: translate(0, -30px);
-  -webkit-transition: -webkit-transform 250ms linear;
-  transition: -webkit-transform 250ms linear;
-  transition: transform 250ms linear;
-  transition: transform 250ms linear, -webkit-transform 250ms linear;
+  -webkit-transition: -webkit-transform 250 ms linear;
+  transition: -webkit-transform 250 ms linear;
+  transition: transform 250 ms linear;
+  transition: transform 250 ms linear, -webkit-transform 250 ms linear;
 }
 
 .comment > .form-input {

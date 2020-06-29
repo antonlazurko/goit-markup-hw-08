@@ -84,12 +84,14 @@
   background-size: 20px;
   background-repeat: no-repeat;
   background-position: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition($type: background-color);
+  // transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .member-list .link > .link-icon {
   display: inline-block;
   fill: #afb1b8;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition($type: fill);
+  // transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .member-list .link:hover > .link-icon,
 .member-list .link:focus > .link-icon {

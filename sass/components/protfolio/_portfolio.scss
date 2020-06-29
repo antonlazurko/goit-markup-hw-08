@@ -69,8 +69,10 @@
   height: 100%;
   transform: translateY(100%);
   opacity: 0;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition($type: transform);
+  @include transition($type: color);
+  // transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  //   color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: rgba(33, 150, 243, 0.9);
   .work-list .item:hover &,
   .work-list .item:focus & {
