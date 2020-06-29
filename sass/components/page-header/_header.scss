@@ -1,0 +1,94 @@
+.site-nav,
+.link-nav {
+  @extend %list-rule;
+}
+.site-nav {
+  @media screen and(min-width: $tablet) {
+    @include centeredFlex();
+    margin-left: 81px;
+  }
+}
+.link-nav {
+  @media screen and(min-width: $tablet) {
+    display: block;
+    text-align: left;
+  }
+  @media screen and(min-width: $desktop) {
+    @include centeredFlex($align: baseline);
+  }
+}
+.site-nav .link,
+.link-nav .link {
+  display: block;
+  color: $primary-text-color;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  @include transition($type: color);
+}
+.site-nav .item {
+  @media screen and(max-width: $tablet) {
+    margin-bottom: 40px;
+  }
+  @media screen and(min-width: $tablet) {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+}
+.site-nav .link {
+  @media screen and(min-width: $tablet) {
+    margin-bottom: 0;
+    padding-bottom: 34px;
+    padding-top: 34px;
+  }
+}
+.link-nav .item {
+  @media screen and(min-width: $desktop) {
+    &:not(:last-child) {
+      @include centeredFlex();
+      margin-right: 30px;
+    }
+  }
+}
+.link-nav .link {
+  margin-bottom: 16px;
+  color: $secondary-text-color;
+  @media screen and(min-width: $tablet) {
+    margin-bottom: 10px;
+  }
+}
+.nav-icon {
+  display: inline-block;
+  margin-right: 10px;
+  fill: $secondary-text-color;
+  @include transition($type: fill);
+}
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: $accent-color;
+}
+.site-nav .link.current {
+  position: relative;
+  color: $accent-color;
+  &::after {
+    position: absolute;
+    content: '';
+    height: 4px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: currentColor;
+    border-radius: 2px;
+  }
+}
+
+.link-nav .link:hover,
+.link-nav .link:focus {
+  color: $accent-color;
+}
+.link-nav .link:hover .nav-icon,
+.link-nav .link:focus .nav-icon {
+  fill: $accent-color;
+}

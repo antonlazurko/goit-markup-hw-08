@@ -1,8 +1,6 @@
 .form {
   @include centeredFlex();
   flex-direction: column;
-  padding-left: 40px;
-  padding-right: 40px;
 }
 .form > b {
   display: inline-block;
