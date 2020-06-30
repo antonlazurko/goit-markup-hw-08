@@ -6,10 +6,9 @@
   height: 100%;
   opacity: 1;
   padding: 94px 15px;
-
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
     & {
-      padding: 159px 208px;
+      padding: 208px 159px;
     }
   }
   @media screen and (min-width: $desktop) {
@@ -32,7 +31,7 @@
 .modal {
   position: relative;
   padding: 40px;
-  width: 450px;
+  max-width: 450px;
   background-color: $white-color;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
@@ -46,7 +45,7 @@
       transform: translate(-50%, -50%) scale(1);
       @include transition($type: transform);
       width: 528px;
-      height: 581px;
+      // height: 581px;
     }
   }
 }
