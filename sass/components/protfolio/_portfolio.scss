@@ -6,33 +6,46 @@
   }
 
   @media screen and (min-width: $tablet) {
-  }
-
-  @media screen and (min-width: $desktop) {
     display: flex;
     flex-wrap: wrap;
   }
 }
 .work-list .item {
   display: block;
-  width: calc((100% - 60px) / 3);
-  margin-right: 30px;
   margin-bottom: 30px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  overflow: hidden;
-  &.item:hover,
-  &.item:focus {
-    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
-      0px 1px 1px rgba(0, 0, 0, 0.12);
-  }
-  &.item:nth-child(3n) {
-    margin-right: 0;
-  }
   @media screen and (min-width: $mobile) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 15px * 4) / 2);
+    margin-right: 30px;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 60px) / 3);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+    &.item:hover,
+    &.item:focus {
+      box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+    }
+    &:nth-child(2n) {
+      margin-right: 30px;
+    }
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
   }
 }
-
+.item img {
+  width: 100%;
+  height: auto;
+}
 .card-content {
   padding-left: 24px;
   padding-right: 24px;

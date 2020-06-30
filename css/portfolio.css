@@ -301,7 +301,8 @@ body.modal-open {
 
 img {
   display: block;
-  max-width: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .title-margin {
@@ -669,7 +670,7 @@ a {
   border-radius: 5px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .work-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -681,21 +682,47 @@ a {
 
 .work-list .item {
   display: block;
-  width: calc((100% - 60px) / 3);
-  margin-right: 30px;
   margin-bottom: 30px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  overflow: hidden;
 }
 
-.work-list .item.item:hover, .work-list .item.item:focus {
-  -webkit-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
-          box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+@media screen and (min-width: 480px) {
+  .work-list .item {
+    width: 100%;
+  }
 }
 
-.work-list .item.item:nth-child(3n) {
-  margin-right: 0;
+@media screen and (min-width: 768px) {
+  .work-list .item {
+    width: calc((100% - 15px * 4) / 2);
+    margin-right: 30px;
+  }
+  .work-list .item:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .work-list .item {
+    width: calc((100% - 60px) / 3);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+  }
+  .work-list .item.item:hover, .work-list .item.item:focus {
+    -webkit-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+            box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+  }
+  .work-list .item:nth-child(2n) {
+    margin-right: 30px;
+  }
+  .work-list .item:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+.item img {
+  width: 100%;
+  height: auto;
 }
 
 .card-content {

@@ -5,7 +5,7 @@
 }
 .what-we-do-list {
   @extend %list-rule;
-  @include centeredFlex($justify: flex-start);
+  @include centeredFlex();
   padding: 0px;
 }
 .section .what-we-do-list .title {
