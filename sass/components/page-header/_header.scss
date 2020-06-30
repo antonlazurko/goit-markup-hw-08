@@ -73,6 +73,7 @@
   position: relative;
   color: $accent-color;
   &::after {
+    // display: block;
     position: absolute;
     content: '';
     height: 4px;
