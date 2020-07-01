@@ -453,6 +453,9 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
   min-height: 80px;
 }
 
@@ -592,6 +595,11 @@ a {
   }
 }
 
+.site-nav .link {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 @media screen and (min-width: 768px) {
   .site-nav .link {
     margin-bottom: 0;
@@ -645,6 +653,7 @@ a {
 }
 
 .site-nav .link.current::after {
+  display: block;
   position: absolute;
   content: '';
   height: 4px;

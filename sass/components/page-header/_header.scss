@@ -38,6 +38,8 @@
   }
 }
 .site-nav .link {
+  padding-top: 10px;
+  padding-bottom: 10px;
   @media screen and(min-width: $tablet) {
     margin-bottom: 0;
     padding-bottom: 34px;
@@ -73,7 +75,7 @@
   position: relative;
   color: $accent-color;
   &::after {
-    // display: block;
+    display: block;
     position: absolute;
     content: '';
     height: 4px;
