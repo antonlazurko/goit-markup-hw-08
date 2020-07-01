@@ -10,3 +10,10 @@
 ) {
   transition: $type $time $style;
 }
+@mixin bg-image(
+  $gradient:
+    linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)),
+  $image: url(../images/hero/imgmobile.jpg)
+) {
+  background-image: $gradient, $image;
+}
