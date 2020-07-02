@@ -5,6 +5,7 @@
   width: 100%;
   height: 100%;
   opacity: 1;
+  z-index: 3;
   padding: 94px 15px;
   @media screen and (min-width: $tablet) and (max-width: 1199px) {
     & {
