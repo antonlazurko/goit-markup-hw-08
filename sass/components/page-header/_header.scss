@@ -19,7 +19,6 @@
 }
 .site-nav .link,
 .link-nav .link {
-  display: block;
   color: $primary-text-color;
   font-weight: 500;
   font-size: 14px;
@@ -55,6 +54,7 @@
   }
 }
 .link-nav .link {
+  display: block;
   margin-bottom: 16px;
   color: $secondary-text-color;
   @media screen and(min-width: $tablet) {
