@@ -27,12 +27,13 @@
   @include transition($type: color);
 }
 .site-nav .item {
-  @media screen and(max-width: $tablet) {
+  @media screen and(max-width: 767px) {
     margin-bottom: 40px;
   }
   @media screen and(min-width: $tablet) {
     &:not(:last-child) {
       margin-right: 50px;
+      margin-bottom: 0;
     }
   }
 }
@@ -43,6 +44,7 @@
     margin-bottom: 0;
     padding-bottom: 34px;
     padding-top: 34px;
+    display: block;
   }
 }
 .link-nav .item {
