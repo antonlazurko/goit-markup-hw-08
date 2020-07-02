@@ -5,7 +5,7 @@
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 }
 .subscribe > .forma {
   display: flex;
@@ -31,12 +31,12 @@
 }
 .input-forma {
   @media screen and (min-width: $desktop) {
-    //   margin-right: 12px;
     display: flex;
   }
 }
 .input-forma--inner {
   height: 50px;
+  padding-left: 16px;
   font-family: inherit;
   font-style: normal;
   font-weight: 400;

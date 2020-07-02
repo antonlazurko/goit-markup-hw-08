@@ -6,10 +6,10 @@
   height: 100%;
   opacity: 1;
   z-index: 3;
-  padding: 94px 15px;
+  padding: 0 15px;
   @media screen and (min-width: $tablet) and (max-width: 1199px) {
     & {
-      padding: 208px 159px;
+      padding: 0 159px;
     }
   }
   @media screen and (min-width: $desktop) {

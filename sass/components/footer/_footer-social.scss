@@ -1,7 +1,6 @@
 .footer-social {
   @include centeredFlex();
   padding-top: 20px;
-  margin-bottom: 60px;
   @extend %list-rule;
   &__item {
     display: flex;
