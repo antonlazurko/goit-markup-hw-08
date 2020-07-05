@@ -21,12 +21,12 @@
 .link-nav .link {
   color: $primary-text-color;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   @include transition($type: color);
   @media screen and (max-width: $tablet) {
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1.17;
   }
 }
